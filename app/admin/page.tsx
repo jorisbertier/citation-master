@@ -1,7 +1,9 @@
 import { Card, CardHeader, CardTitle } from "@/src/components/ui/card";
 
 export default async function Page() {
-    await new Promise((r) => setTimeout(r, 3000))
+    await new Promise((r) => setTimeout(r, 1000))
+
+    // throw new Error('Invalid pathname')
     return (
         <Card>
             <CardHeader>
