@@ -28,7 +28,7 @@ export default async function Page() {
                         </div>
                         <p className="realtive pl-8 italic before:content-['«'] before:absolute after:content-['»']">{citation.text}</p>
                         <p>-- {citation.author}</p>
-                        <DeleteCitationButton />
+                        <DeleteCitationButton id={citation.id} />
                     </Card>
                 ))}
                 <Link href="/admin/citations/1" className={buttonVariants({size: "lg", variant: 'outline'})}>Citation 1</Link>
