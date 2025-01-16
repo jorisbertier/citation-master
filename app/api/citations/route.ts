@@ -1,3 +1,4 @@
+import { prisma } from "@/src/lib/prisma";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function GET() {
@@ -8,14 +9,18 @@ export async function GET() {
 }
 
 export async function POST(request: NextRequest) {
-    const formData = await request.formData()
-    console.log(formData)
+    const json = await request.json()
+        await new Promise((r) => setTimeout(r, 1000))
 
-    const data = {
-        citation: formData.get("citation"),
-        author: formData.get('author')
-    }
+    
+    const newCitation = await prisma.citation.create({
+        data: {
+            author: json.author,
+            text: json.citation
+        }
+    })
+
     return NextResponse.json({
-        data,
+        citation: newCitation,
     })
 }
