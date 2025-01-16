@@ -26,10 +26,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} font-sans ${geistMono.variable} antialiased max-w-lg px-4 py-6 h-full`}
+        className={`${geistSans.variable} font-sans ${geistMono.variable} antialiased max-w-lg m-auto px-4 py-6 h-full`}
       >
-        <div className="flex flex-col gap-4"></div>
-        <Header/>
         {children}
       </body>
     </html>

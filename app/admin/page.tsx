@@ -33,11 +33,12 @@ export default async function Page() {
                             <Link href={`/admin/citations/${citation.id}`}
                             className={buttonVariants({size: "lg", variant: 'outline'})}>Edit
                             </Link>
+                            <Link href={`/citation/${citation.id}`}
+                            className={buttonVariants({size: "lg", variant: 'outline'})}>Partager
+                            </Link>
                         </div>
                     </Card>
                 ))}
-                <Link href="/admin/citations/1" className={buttonVariants({size: "lg", variant: 'outline'})}>Citation 1</Link>
-                <Link href="/admin/citations/joris" className={buttonVariants({size: "lg", variant: 'outline'})}>Citation Joris</Link>
                 <Link href="/admin/citations/new" className={buttonVariants({size: "lg", variant: 'outline'})}>Create citation</Link>
             </CardContent>
         </Card>
