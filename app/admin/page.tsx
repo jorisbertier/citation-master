@@ -13,7 +13,7 @@ export default async function Page() {
         }
     })
 
-    // set Error
+    // set Error 
     // throw new Error('Invalid pathname')
     return (
         <Card>
